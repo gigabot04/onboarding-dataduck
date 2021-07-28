@@ -780,12 +780,18 @@ button,
   height: 64px;
   display: block;
   margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #212d3e;
+}
+
+.form__label-area:hover {
+  border: 1px solid rgba(32, 168, 107, 0.5);
 }
 
 .form__input-area {
   background-color: #212d3e;
-  border: 1px solid #212d3e;
   border-radius: 4px;
+  border: none;
   width: 100%;
   max-width: 440px;
   height: 100%;
@@ -798,18 +804,34 @@ button,
   transition: 0.5s;
 }
 
+.form__input-area--active {
+  outline: none;
+  padding: 32px 24px 8px;
+}
+
+.form__input-area--active + span {
+  top: 12px;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
 .form__input-area:focus,
 .form__input-area:valid {
   outline: none;
   padding: 32px 24px 8px;
 }
 
-.form__input-area:focus ~ span,
-.form__input-area:valid ~ span {
+.form__input-area:focus + span,
+.form__input-area:valid + span {
   top: 12px;
   font-size: 12px;
   letter-spacing: 0;
   line-height: 16px;
+}
+
+.form__input-area:valid {
+  border: 1px solid #20a86b;
 }
 
 .form__input-span {
@@ -818,6 +840,7 @@ button,
   left: 24px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  cursor: text;
 }
 
 .form__fieldset {
@@ -883,6 +906,10 @@ button,
   position: relative;
   margin-bottom: 32px;
   cursor: pointer;
+}
+
+.form__agreement--error {
+  color: #e15433;
 }
 
 .form__agreement::before {
