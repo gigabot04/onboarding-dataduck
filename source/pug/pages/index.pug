@@ -6,32 +6,33 @@ block variables
 
 block main
   main.main
-    .main__wrapper.container
-      .main__info
-        h1.main__head Начните торговать прямо сейчас
-        p.main__text Нет спреда — торгуйте с прозрачными и точными котировками
-        p.main__text Достаточно депозита в $10, чтобы начать торговать
-      form.form(action="", method="post")
-        label.form__label-area
-          input.form__input-area(type="email", name="email", required)
-          span.form__input-span Ваш e-mail
-        label.form__label-area
-          input.form__input-area(type="password", name="password", required)
-          span.form__input-span Придумайте пароль
-        fieldset.form__fieldset
-          h2.form__currency-text Валюта для ввода и вывода средств
-          input.form__carrency-input.visually-hidden#currency1(type="radio", name="currency", checked)
-          label.form__carrency-label(for="currency1") P
-          input.form__carrency-input.visually-hidden#currency2(type="radio", name="currency")
-          label.form__carrency-label(for="currency2") S
-          input.form__carrency-input.visually-hidden#currency3(type="radio", name="currency")
-          label.form__carrency-label(for="currency3") E
-        input.form__agreement-input.visually-hidden#agreement(type="checkbox", name="agreement")
-        label.form__agreement(for="agreement") Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.
+    .container
+      .main__wrapper
+        .main__info
+          h1.main__head Начните торговать прямо сейчас
+          p.main__text Нет спреда — торгуйте с прозрачными и точными котировками
+          p.main__text Достаточно депозита в $10, чтобы начать торговать
+        form.form(action="", method="post")
+          label.form__label-area
+            input.form__input-area(type="email", name="email", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required)
+            span.form__input-span Ваш e-mail
+          label.form__label-area
+            input.form__input-area(type="password", name="password", minlength="4", required)
+            span.form__input-span Придумайте пароль
+          fieldset.form__fieldset
+            h2.form__currency-text Валюта для ввода и вывода средств
+            input.form__carrency-input.visually-hidden#currency1(type="radio", name="currency", checked)
+            label.form__carrency-label(for="currency1") P
+            input.form__carrency-input.visually-hidden#currency2(type="radio", name="currency")
+            label.form__carrency-label(for="currency2") S
+            input.form__carrency-input.visually-hidden#currency3(type="radio", name="currency")
+            label.form__carrency-label(for="currency3") E
+          input.form__agreement-input.visually-hidden#agreement(type="checkbox", name="agreement")
+          label.form__agreement(for="agreement") Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.
 
-        button.form__submit(type="submit") Зарегистрироваться
-      button.main__in(type="button") Войти
-        +icon("user", "24", "24")
-    .main__img
-      +picture("content", "macbook", "png", "1063", "613", "Картинка макбука").main__macbook
-      +picture("content", "iphone", "png", "245", "482", "Картинка айфона").main__iphone
+          button.form__submit(type="submit") Зарегистрироваться
+        button.main__in(type="button") Войти
+          +icon("user", "24", "24")
+      .main__img
+        +picture("content", "macbook", "png", "1063", "613", "Картинка макбука").main__macbook
+        +picture("content", "iphone", "png", "245", "482", "Картинка айфона").main__iphone

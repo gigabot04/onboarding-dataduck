@@ -626,6 +626,7 @@ button,
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 100px;
+  position: relative;
 }
 
 .main {
@@ -802,6 +803,10 @@ button,
   line-height: 24px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.form__input-area--error {
+  border: 1px solid #e15433;
 }
 
 .form__input-area--active {
