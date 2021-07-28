@@ -5,9 +5,9 @@ import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/modals/init-modals';
 
-//-- этот скрипт загружает модуль для тестирования, его не должно быть в финальном билде и на проде для клиента
-import {testInstruments} from './vendor/testInstruments';
-//--
+// этот скрипт загружает модуль для тестирования, его не должно быть в финальном билде и на проде для клиента
+// import {testInstruments} from './vendor/testInstruments';
+//
 
 // ---------------------------------
 
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    testInstruments();
+    // testInstruments();
   });
 });
 

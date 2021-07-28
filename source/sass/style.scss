@@ -17,13 +17,12 @@
 // Blocks
 //---------------------------------
 
-@import "blocks/header";
-@import "blocks/main-nav";
-@import "blocks/footer";
-@import "blocks/modal";
+@import "blocks/main";
+@import "blocks/form";
+
 
 // Модуль для тестирования, не должен быть в финальной версии и версии для клиента
-@import "vendor/test";
+// @import "vendor/test";
 
 
 // используйте это для отключения ховеров на тач устройствах

@@ -1,0 +1,147 @@
+.main {
+  position: relative;
+  background-color: $color-black-pearl;
+  padding-top: 12px;
+}
+
+.main__img {
+  position: absolute;
+  top: 86px;
+  right: 0;
+  height: 613px;
+  max-height: 613px;
+  width: 1063px;
+  margin-right: -258px;
+
+  .main__macbook img {
+    height: 613px;
+    max-height: 613px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .main__iphone img {
+    position: absolute;
+    bottom: 0;
+    left: -13px;
+
+    @include vp--1279 {
+      display: none;
+    }
+  }
+
+  @include vp--1023 {
+    display: none;
+  }
+}
+
+.main__wrapper {
+  max-width: 1440px;
+  color: $color-bermuda-grey;
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  grid-template-rows: max-content;
+  padding-bottom: 135px;
+
+  @include vp--1023 {
+    grid-template-columns: 440px;
+    justify-content: center;
+  }
+
+  @include vp--767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main__info {
+  z-index: 1;
+  padding-top: 72px;
+  position: relative;
+  grid-row: span 2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 140px;
+    height: 16px;
+    background-color: $color-default-white;
+  }
+
+  @include vp--1023 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+}
+
+.main__head {
+  color: $color-default-white;
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.main__text {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  padding-left: 40px;
+  position: relative;
+  margin-top: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    width: 18px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/content/check.png");
+  }
+}
+
+.main__in {
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 1;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid $color-default-white;
+  width: 120px;
+  height: max-content;
+  padding: 8px 18.7px 8px 48.3px;
+  font-size: 16px;
+  color: $color-default-white;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 24px;
+  position: relative;
+  justify-self: end;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $color-eucalyptus;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  svg {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+
+  @include vp--1023 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
