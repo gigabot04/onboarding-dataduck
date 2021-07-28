@@ -14,10 +14,10 @@ block main
           p.main__text Достаточно депозита в $10, чтобы начать торговать
         form.form(action="", method="post")
           label.form__label-area
-            input.form__input-area(type="email", name="email", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required)
+            input.form__input-area(type="email", name="email", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", autocomplete="off" required)
             span.form__input-span Ваш e-mail
           label.form__label-area
-            input.form__input-area(type="password", name="password", minlength="4", required)
+            input.form__input-area(type="password", name="password", minlength="4", autocomplete="off", required)
             span.form__input-span Придумайте пароль
           fieldset.form__fieldset
             h2.form__currency-text Валюта для ввода и вывода средств
