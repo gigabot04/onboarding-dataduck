@@ -1,8 +1,8 @@
 
 import {iosVhFix} from './utils/ios-vh-fix';
 import {checkInputText} from './modules/check-input-text';
-import {checkAgreement} from './modules/check-agreement';
 import {checkInput} from './modules/check-input';
+import {loadLocalStorage} from './modules/localStorage';
 
 
 // ---------------------------------
@@ -12,8 +12,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('load', () => {
     checkInputText();
-    checkAgreement();
     checkInput();
+    loadLocalStorage();
   });
 });
 
