@@ -125,7 +125,8 @@
   justify-self: end;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 1px solid $color-eucalyptus;
   }
 

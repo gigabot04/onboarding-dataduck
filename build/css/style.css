@@ -746,7 +746,8 @@ button,
   cursor: pointer;
 }
 
-.main__in:hover {
+.main__in:hover,
+.main__in:focus {
   border: 1px solid #20a86b;
 }
 
