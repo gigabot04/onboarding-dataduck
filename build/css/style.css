@@ -659,7 +659,6 @@ button,
 }
 
 .main__wrapper {
-  max-width: 1440px;
   color: #7a8f99;
   display: -ms-grid;
   display: grid;
@@ -902,6 +901,10 @@ button,
   border: 1px solid #20a86b;
 }
 
+.form__carrency-input:focus + .form__carrency-label {
+  outline: 1px solid #ffffff;
+}
+
 .form__agreement {
   font-size: 12px;
   letter-spacing: 0;
@@ -945,6 +948,10 @@ button,
   left: 7px;
   width: 18px;
   height: 18px;
+}
+
+.form__agreement-input:focus + .form__agreement {
+  outline: 1px solid #ffffff;
 }
 
 .form__submit {

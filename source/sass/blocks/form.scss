@@ -139,6 +139,10 @@
   border: 1px solid $color-eucalyptus;
 }
 
+.form__carrency-input:focus + .form__carrency-label {
+  outline: 1px solid $color-default-white;
+}
+
 .form__agreement {
   font-size: 12px;
   letter-spacing: 0;
@@ -202,6 +206,10 @@
     width: 8px;
     height: 8px;
   }
+}
+
+.form__agreement-input:focus + .form__agreement {
+  outline: 1px solid $color-default-white;
 }
 
 .form__submit {
